@@ -1,3 +1,11 @@
+<!-- 
+This page explains WHY we're building Naawi-Oodena and HOW we're doing it.
+First section's about fixing history and building a better future.
+Second one's all about the process — making it eco and done by the community.
+We used Flexbox to make the two boxes sit side by side and look nice.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +13,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Naawi View - Page 2</title>
 <link rel="stylesheet" href="css/styles.css" />
+
+<style>
+
+    .sidecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 30px;
+    }
+
+    .sidebox {
+    flex: 1 1 450px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .sidebox:hover {
+    transform: scale(1.03);
+    background-color: #eee0b7;
+    }
+
+
+
+</style>
+
 </head>
 <body>
 
@@ -17,52 +54,39 @@
 </header>
 
 <div class="center-nav-container">
-    <nav class="center-nav">
+    <nav class="center-nav" role="navigation" aria-label="Main site links">
     <a href="history.html">History</a>
     <a href="aboutus.html">About Us</a>
     <a href="index.html">Home</a>
-    <a href="info.html">More Info</a>
+    <a href="info.html">Community</a>
     <a href="contact.html">Contact</a>
 </nav>
 </div>
 
-<h1>Naawi Oodena</h1>
+
+<h1>Naawi-Oodena</h1>
 
 
+<section class="sidecontainer">
+<article class="sidebox">
+    <h2>Why We Are Building It</h2>
+    <p>Naawi-Oodena is being built to restore land, culture, and community. 
+        It represents a historic agreement between Indigenous nations and
+        the Government of Canada to return control of a significant urban space. This development serves as a symbol of reconciliation, 
+        resilience, and renewal—providing housing, economic opportunity, and cultural revitalization in the heart of Winnipeg.</p>
+    <img src="images/whybuild.jpg" alt="Community gathering in natural space">
+</article>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<article class="sidebox">
+    <h2>How We Are Building It</h2>
+    <p>Naawi-Oodena is being built through a collaborative, community-led process. 
+        Planning is directed by Indigenous leadership and guided by values like sustainability, accessibility, and cultural inclusion. 
+        The design prioritizes walkability, environmental protection, and mixed-use development, 
+        blending residential, recreational, and educational spaces. 
+        Every step—from naming streets to selecting building materials—is rooted in respect for people and land.</p>
+    <img src="images/howbuild.jpg" alt="Modern sustainable construction and planning">
+</article>
+</section>
 
 
 
@@ -71,5 +95,9 @@
 <a href="index.html">
     <button class="page2-button">Page 1</button>
 </a>
+
+<footer class="footer">
+<p>&copy; 2025 Naawi View. All rights reserved.</p>
+</footer>
 </body>
 </html>

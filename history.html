@@ -1,34 +1,129 @@
+<!-- 
+This page tells the story of Naawi-Oodena, from way back to now.
+It uses those <details> things so people can open each part and not get overwhelmed.
+Real simple layout but still clean.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Naawi View - History</title>
 <link rel="stylesheet" href="css/styles.css" />
+<style>
+    body {
+    background-color: #f3efe4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    }
+
+    h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    color: #3e3523;
+    }
+
+    .wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    }
+
+    details {
+    background-color: #ffffff;
+    border: 2px solid #d7c584;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 0;
+    transition: all 0.3s ease;
+    }
+
+    summary {
+    padding: 18px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3e3523;
+    cursor:pointer;
+    user-select:none;
+    }
+
+    details[open] {
+    background-color: #fff9e2;
+    border-color: #c5b36a;
+    }
+
+    details p {
+    padding: 0 24px 20px 24px;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.8;
+    }
+</style>
 </head>
 <body>
 
+
+
 <header>
-    <div class="logo">
+<div class="logo">
     <a href="index.html">
-        <img src="images/REALLOGO.png" alt="Naawi View Logo" />
+    <img src="images/REALLOGO.png" alt="Naawi View Logo" />
     </a>
-    </div>
+</div>
 </header>
 
 <div class="center-nav-container">
-    <nav class="center-nav">
+<nav class="center-nav">
     <a href="history.html">History</a>
     <a href="aboutus.html">About Us</a>
     <a href="index.html">Home</a>
-    <a href="info.html">More Info</a>
+    <a href="info.html">Community</a>
     <a href="contact.html">Contact</a>
 </nav>
 </div>
 
-<h1>History</h1>
+<h1>The Story of Naawi-Oodena</h1>
 
+<main class="accordion-wrapper">
 
-</a>
+<details>
+    <summary>Before Development</summary>
+    <p>Long before Naawi-Oodena became a community in progress, the land held deep cultural and spiritual meaning.
+        Indigenous peoples gathered here for generations to share stories, offer prayers, and connect with nature. 
+        The land was more than a location—it was a living memory and part of identity.</p>
+</details>
+
+<details>
+    <summary>Displacement and Disruption</summary>
+    <p>During the colonial era, the land was repurposed and transformed for military use. 
+        Its original caretakers were displaced, and ceremonies were halted. Yet, 
+        the knowledge and memories tied to this place endured through oral tradition, family teachings, and spiritual connection.</p>
+</details>
+
+<details>
+    <summary>Reclamation and Justice</summary>
+    <p>Through decades of advocacy, communities fought to reclaim what was lost. After persistent legal battles and public action, 
+        the land was rightfully returned to Indigenous stewardship. The reclamation was not only political—it was emotional, symbolic, 
+        and empowering.</p>
+</details>
+
+<details>
+    <summary>Building the Future</summary>
+    <p>Naawi-Oodena is being reimagined as a place of balance: where tradition and innovation coexist. 
+        It is a beacon of sustainability, community, and cultural resurgence. With walkable design, green space, 
+        and shared governance, it honors the past while embracing the future.</p>
+</details>
+
+</main>
+
+<footer class="footer">
+<p>&copy; 2025 Naawi View. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
+

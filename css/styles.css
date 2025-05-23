@@ -1,48 +1,53 @@
+/*
+Mainly a cream background, some earth tones for culture & warmth,
+and black/white for text clarity.
+*/
+
 body {
-    background-color: #f3efe4;
-    margin: 0;
+    background-color: #f3efe4;  /* Calm cream base */
+    margin: 0;                  /* Kill default spacing */
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;  /* Safe system font */
     text-align: center;
-    min-height: 2000px;
     position: relative;
 }
 
 header {
-    margin-top: 20px;
+    margin-top: 20px;           /* Push header down slightly */
 }
 
 .logo img {
-    width: 150px;
+    width: 150px;               /* Fixed logo size */
     height: 150px;
     display: block;
     margin: 0 auto;
-    transform: scaleX(1);
+    transform: scale(1.03);     /* Subtle zoom effect */
 }
 
 h1 {
     margin-top: 10px;
-    font-size: 36px;
+    font-size: 36px;            /* Big heading energy */
 }
 
 .center-nav-container {
-    display: flex;
+    display: flex;              /* Flexbox magic */
     justify-content: center;
-    border: 2px solid black;
-    padding: 10px 20px;
-    width: fit-content;
+    border: 2px solid black;    /* Bold border */
+    padding: 10px 20px;         /* Comfy click area */
+    width: 80%;
+    max-width: 800px;
     margin: 20px auto;
-    border-radius: 8px;
+    border-radius: 8px;         /* Rounded corners */
     background-color: #f3efe4;
 }
 
 .center-nav {
     display: flex;
-    gap: 15px;
+    gap: 15px;                  /* Space between nav items */
 }
 
 .center-nav a {
-    text-decoration: none;
+    text-decoration: none;      /* No ugly underlines */
     color: black;
     font-size: 20px;
     position: relative;
@@ -55,7 +60,7 @@ h1 {
     right: 0;
     top: 25%;
     height: 50%;
-    width: 1px;
+    width: 1px;                 /* Thin separator line */
     background-color: black;
 }
 
@@ -63,33 +68,8 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    padding: 40px 20px;
-}
-
-.section {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    flex: 1 1 300px;
-    text-align: left;
-}
-
-.section h2 {
-    color: #6a5d3c;
-}
-
-.section p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.section img {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
+    gap: 30px;                  /* Space between cards */
+    padding: 40px 20px;         /* Container breathing room */
 }
 
 .banner {
@@ -100,7 +80,7 @@ h1 {
 .banner img {
     width: 100%;
     max-height: 400px;
-    object-fit: cover;
+    object-fit: cover;          /* Smart image cropping */
     display: block;
 }
 
@@ -110,8 +90,8 @@ h1 {
     right: 0;
     width: 100px;
     padding: 12px 20px;
-    background-color: #d7c584;
-    color: rgb(0, 0, 0);
+    background-color: #d7c584;  /* Gold-ish button */
+    color: black;
     border-radius: 8px;
     cursor: pointer;
     border: none;
@@ -119,46 +99,153 @@ h1 {
 }
 
 .page2-button:hover {
-    background-color: #b0a270;
+    background-color: #b0a270;  /* Darker on hover */
 }
 
-.roar{
-    width: 50px;
-    transition: 0.3s ease-in-out;
-    width: 40%;
+.roar {
+    transition: 0.3s ease-in-out;  /* Smooth transform */
+    width: 45%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color:#e4d4ab;
+    background-color: #e4d4ab;
     border-radius: 4px;
     display: flex;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle depth */
 }
 
-.roar:hover{
+.roar:hover {
     transform: scale(1.1);
     background-color: #bea462;
 }
 
-#lol{
-    width: 800px;
-    margin: auto;
-    text-align: left;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    translate:-465px 15px ;
+.side-by-side-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    animation: slideIn 0.6s ease;  /* Entry animation */
 }
 
-#lmao{
-    width: 43%;
-    margin: auto;
-    text-align: left;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#lol,
+#lmao {
+    width: 650px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    translate: 480px -475px;
+    text-align: left;
+    flex-shrink: 0;
+    margin: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#lol:hover,
+#lmao:hover {
+    transform: scale(1.03);
+    background-color: #eee0b7;
+}
+
+.footer {
+    background-color: #af9f65;
+    color: black;
+    text-align: center;
+    padding: 20px 10px;
+    bottom: 0;
+    width: 100%;
+    max-width: 1500px;
+    border-top: 2px solid #b0a270;
+    margin-top: 60px;
+    font-weight: bold;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);  /* Top shadow */
+}
+
+.footerstuff p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #b0a270;
+}
+
+button:focus, a:focus {
+    outline: 2px dashed #b0a270;
+    outline-offset: 4px;        /* Accessible focus state */
+}
+
+.section {
+    background: white;
+    max-width: 720px;
+    margin: 0 auto 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    padding: 20px;
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.section:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);  /* Deeper shadow on hover */
+}
+
+.section img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.section:hover img {
+    transform: scale(1.05);      /* Subtle image zoom */
+}
+
+.section h2 {
+    color: #6a5d3c;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.5;            /* Better readability */
+}
+
+.section-content {
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.section-content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.section-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
 }

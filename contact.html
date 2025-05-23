@@ -1,3 +1,11 @@
+<!-- 
+This is the contact page. 
+You fill out the form if you wanna ask something or give feedback.
+We made it look neat with some shadows and rounded corners.
+And the dropdown for subject makes it easier to pick what it's about.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +13,72 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Naawi View - Contact</title>
 <link rel="stylesheet" href="css/styles.css" />
+<style>
+    .contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #6a5d3c;
+    }
+
+    .contact-form label {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    }
+
+    .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    }
+
+    .contact-form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #d7c584;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+    background-color: #b0a270;
+    }
+
+    .contact-form {
+animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+</style>
+
+
 </head>
 <body>
 
@@ -17,16 +91,52 @@
 </header>
 
 <div class="center-nav-container">
-    <nav class="center-nav">
+    <nav class="center-nav" role="navigation" aria-label="Main site links">
     <a href="history.html">History</a>
     <a href="aboutus.html">About Us</a>
     <a href="index.html">Home</a>
-    <a href="info.html">More Info</a>
+    <a href="info.html">Community</a>
     <a href="contact.html">Contact</a>
 </nav>
 </div>
 
 <h1>Contact</h1>
+<section class="contact-form">
+    <form action="#" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required />
+<br>
+<br>
+<br>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+<br>
+<br>
+<br>
+    <label for="subject">Subject:</label>
+    <select id="subject" name="subject">
+    <option value="">-- Please choose a subject --</option>
+    <option value="info">General Information</option>
+    <option value="tour">Request a Tour</option>
+    <option value="volunteer">Volunteer</option>
+    <option value="partnership">Partnership</option>
+    <option value="feedback">Feedback</option>
+</select>
+<br>
+<br>
+<br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+<br>
+<br>
+<br>
+    <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 Naawi View. All rights reserved.</p>
+</footer>
 
 
 </a>
